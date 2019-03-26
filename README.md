@@ -32,3 +32,14 @@ $ python manage.py runserver
 **in your browser to see and follow your work on the project**
 
 * Copy and run this localhost address http://127.0.0.1:8000
+
+## Installations
+-Python version 3.6
+
+-Django 2.0
+
+-Pip
+
+-virtualenv
+
+-A text Editor
