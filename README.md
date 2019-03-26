@@ -8,7 +8,7 @@ Instagram app allows user  to display  photos for others to see.
 
 ## BDD
 
-A **user** will be able to:
+A **user**, i will be able to:
 
 * Sign in to the application to start using.
 * Upload my pictures to the application.
