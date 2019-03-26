@@ -43,3 +43,14 @@ $ python manage.py runserver
 -virtualenv
 
 -A text Editor
+
+## Technologies Used
+
+Django
+
+HTML/CSS
+
+Bootstrap
+
+link to visit : 
+
