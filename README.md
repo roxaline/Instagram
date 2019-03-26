@@ -17,3 +17,18 @@ A **user**, i will be able to:
 * Like a picture and leave a comment on it.
 * Accessto this app  both on desktop and mobile.
 
+## Setup/Installation Requirements
+
+**To start using this project use the following commands:**
+* $ git clone https://github.com/roxaline/Instagram.git
+
+* $ cd gallery
+
+* $ code . To run this program
+
+* In your terminal:
+$ python manage.py runserver
+
+**in your browser to see and follow your work on the project**
+
+* Copy and run this localhost address http://127.0.0.1:8000
