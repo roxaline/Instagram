@@ -1,0 +1,33 @@
+{% load bootstrap3 %} 
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {%if title%}
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+    <title>{{title}}</title>
+
+{%endif%} 
+{% block styles %} 
+{% endblock %}
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            {% block content %} 
+            {%endblock%} 
+            {% block scripts %}
+                <script src="uikit/dist/js/uikit-icons.min.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
