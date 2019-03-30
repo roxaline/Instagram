@@ -2,40 +2,45 @@
 
 {% block content %}
 <div class="container top"style="background:white;font-size: 20px" >
-  <div class="jumbotron" style="background:teal">
-    <h1 style="color:white;font-size: 30px" class="text-center"> Insta-app</h1>
-    
+  <div class="panel panel-heading" style="background:maroon">
+    <h1 style="color:white;font-size: 30px; font-style:normal;font-weight: bolder" class="text-center"> Insta-app</h1>
   </div>
-    <div class="row">
-        
-            {% for image in image_posts %}
-            <div class="home-images">
-                <p class="home-text">
-                    <a href="{% url 'profile' %}">{{image.profile.username}}</a>
-                </p>
-            <div class="col-md-4" style="margin-bottom: 20px" >
-                <img src="{{image.image.url}}" style="width: 200px; height: 200px;" alt="Image">
-              
-                <ul class="list-inline home-list">
-                    <li class="list-inline-item">
+  <div class="container">
+      <div class="jumbotron">
+          <div class="row">
+              <div class="well">
+                  <h2 style="color:maroon; text-align: center">My recent images</h2>
+              </div>
+                  {% for image in image_posts %}
+                  <div class="home-images" style="color:black">
+                      <p class="home-text">
                         <a href="{% url 'profile' %}">{{image.profile.username}}</a>
-                    </li>
-                    <li class="list-inline-item">
-                    {% autoescape on %}
-                        <p>{{image.image_caption|safe}} </p>
-                        <p>comments:<button class="btn btn-primary">{{image.comments|safe}} </button></p>
-                        <p>likes:<button class="btn btn-primary">{{image.likes|safe}} </button></p>
-                    {% endautoescape %}
-                    </li>
-                </ul>
-                
-            </div>
-        
-            {% empty %}
-            <h2>No images. Plz Follow some people to see their images</h2>
-            {% endfor %}
-        </div>
-        
-    </div>
+                      </p>
+                  <div class="col-md-4" style="margin-bottom: 20px" >
+                      <img src="{{image.image.url}}" style="width: 200px; height: 200px;" alt="Image">
+                    
+                      <ul class="list-inline home-list">
+                          <li class="list-inline-item">
+                            <a href="{% url 'profile' %}">{{image.profile.username}}</a>
+                          </li>
+                          <li class="list-inline-item">
+                          {% autoescape on %}
+                              <p>{{image.image_caption|safe}} </p>
+                              <p>comments:<button class="btn btn-primary">{{image.comments|safe}} </button></p>
+                              <p>likes:<button class="btn btn-primary">{{image.likes|safe}} </button></p>
+                          {% endautoescape %}
+                          </li>
+                      </ul>
+                      
+                  </div>
+              
+                  {% empty %}
+                  <h3 style="text-align:center; color: black">No images to be displayed</h3>
+                  {% endfor %}
+              </div>
+              
+          </div>
+      </div>
+  </div>
 </div>
 {% endblock %}

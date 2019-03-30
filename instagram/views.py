@@ -53,7 +53,7 @@ def profile(request):
 def single_image(request,image_id):
 	image = image.objects.get(id= image_id)
 
-	return render(request, 'my-instagram/single_image.html',{"image":image})
+	return render(request, 'my-images/single_image.html',{"image":image})
 
 def search_results(request):
     if 'image' in request.GET and request.GET["image"]:
@@ -120,4 +120,4 @@ def upload_images(request):
             # return redirect( timeline)
     else:
         form = ImageForm() 
-    return render(request, 'my-instagram/upload_images.html',{"form" : form}) 
+    return render(request, 'my-images/upload_images.html',{"form" : form}) 

@@ -1,17 +1,22 @@
 {%extends 'base.html'%}
 {% load staticfiles%}
 {% load bootstrap3 %}
- {%block content%}
+{%block content%}
 
-<div class="well" style="margin-bottom:  -200px">
-<div class="col-md-3 "></div>
-    <form method="post" enctype="multipart/form-data">
-    {% csrf_token %} 
-    {% bootstrap_form form layout='inline'%}
-    <input type="submit" class="btn btn-primary btn-sm" value="Submit">
-    <input type="hidden" name="next" value="{{next}}">
-</form>
-    <p><a  href="{% url 'profile' %}" >Previous</a></p>
+<div class="container" style="background-color: black;margin-top: 50px">
+    <div class="jumbotron" style="margin-top: 25px; background-image:url('https://images.unsplash.com/photo-1516617442634-75371039cb3a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');background-size: cover">
+            <h2 style="text-align:center;color: white;margin-bottom: 50px">Upload your profile</h2>
+        <!-- <div class="well" style="margin-bottom:  -200px;background-color:rgb(116, 60, 60);color: black"> -->
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %} 
+                {% bootstrap_form form layout='inline'%}
+                <input type="submit" class="btn btn-primary btn-sm" value="Submit">
+                <input type="hidden" name="next" value="{{next}}">
+            </form>
+            <div>
+                <a  href="{% url 'profile' %}"><button>Previous</button></a>
+            </div>
+        <!-- </div>      -->
     </div>
-    
+</div>
 {% endblock %}

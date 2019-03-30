@@ -6,14 +6,11 @@
 <body>
   <div class="container">
     <div class="jumbotron">
-
     </div>
-
-    <nav class="navbar navbar-default navbar-fixed-top " style="background-color:white; border:#EEEEEE; padding:10px;">
+    <nav class="navbar navbar-default navbar-fixed-top " style="background-color:white; border:black; padding:10px;">
       <div class="container-fluid" >
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-          <!-- <img  src="https://geeko.lesoir.be/wp-content/uploads/sites/58/2018/06/instagram.jpg" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" " width="30" height="41" style="margin-top: 9px;" data-iml="1553619846924"> -->
-          <strong><h4>Instagram</h4></strong>  
+          <img src="https://assets.nst.com.my/images/articles/instagram-logo.jpg_1509577002.jpg" width="200px">
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
           <form class="navbar-form" role="search" action="{% url 'search_results' %}">
@@ -26,7 +23,7 @@
            </form>
         </div>
       <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-        <a href="{% url 'profile' %}" id="instagramTitle" style="color: black; margin-right:20px; font-size:25px;"><span class="profile"></span>Profile</a>
+        <a href="{% url 'profile' %}" id="instagramTitle" style="color:rgb(46, 12, 6); margin-right:20px; font-size:20px; font-weight: bold"><span class="profile"></span>Profile</a>
       <div class="col-sm-3 " style="float: right; margin-top: -20px; margin-right: 80px"> 
         {% if user.is_authenticated %}
         <ul>
@@ -39,13 +36,13 @@
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="{% url 'upload_profile'%}">Create Profile</a>
+                <a href="{% url 'upload_profile'%}">Create profile</a>
               </li>
               <li>
-                <a href="{% url 'upload_images'%}">Upload Images</a>
+                <a href="{% url 'upload_images'%}">Upload images</a>
               </li>
               <li>
-                <a href="/accounts/password/change">Change Password</a>
+                <a href="/accounts/password/change">Change password</a>
               </li>
               <li>
                 <a href="/logout">Logout</a>

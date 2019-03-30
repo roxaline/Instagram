@@ -1,38 +1,43 @@
 {%extends "registration/base.html"%} {% load bootstrap3 %}
 {% block content %}
-<div class="container">
-  <div class="row">
-    <!-- Empty div -->
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-      {% if form.errors %}
-        <p> Some Information Might be Incorrect </p>
-      {% endif %}
-      <div class="panel panel-default">
-
-        <div class="panel-heading">
-          <h3 class="text-center">Sign Up</h3>
-        </div>
-        <div class="panel-body">
-
-          <form  action="/accounts/register/" method="post">
-            {% csrf_token %}
-            {% bootstrap_form form %}
-            <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-sm" value="Sign Up">
-            </div>
-
-            <input type="hidden" name="next" value="{{next}}">
-
-          </form>
-
-        </div>
-
+<div class="container" style="margin-top:70px">
+  <h2 style="color:maroon; text-align:center; font-weight: bolder">Registration form</h2>
+  <div class="jumbotron">
+    <div class="row">
+      <!-- Empty div -->
+      <div class="col-md-6">
+          <img src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/07/18/Pictures/instagram-than-estimated-100-billion-worth-more_c3f76d7a-8a74-11e8-82c5-1329a5e665e9.jpg" width="500px" height="620px">
       </div>
-
+      <div class="col-md-6">
+        {% if form.errors %}
+          <p>Wrong entered info</p>
+        {% endif %}
+        <div class="panel panel-default" style="color:black">
+  
+          <div class="panel-heading">
+            <h3 class="text-center" style="color:black; font-weight:bolder">Sign up</h3>
+          </div>
+          <div class="panel-body">
+  
+            <form  action="/accounts/register/" method="post">
+              {% csrf_token %}
+              {% bootstrap_form form %}
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-sm" value="Sign Up">
+              </div>
+  
+              <input type="hidden" name="next" value="{{next}}">
+  
+            </form>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+      <!-- empty div -->
+      <!-- <div class="col-md-4"></div> -->
     </div>
-    <!-- empty div -->
-    <div class="col-md-4"></div>
   </div>
 </div>
 
