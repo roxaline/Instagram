@@ -52,7 +52,7 @@ HTML/CSS
 
 Bootstrap
 
-link to visit : 
+link to visit : *'https://instarox.herokuapp.com'*
 
 ## Contacts
 
